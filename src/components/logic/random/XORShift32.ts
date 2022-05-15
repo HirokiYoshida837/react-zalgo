@@ -1,8 +1,8 @@
-import {IRandomGenerator} from './IRandomGenerator';
+import {IRandomGenerator, IRandomGeneratorFactory} from './IRandomGenerator';
 
-export class XORShift32 implements IRandomGenerator{
+export class XORShift32 implements IRandomGenerator {
 
-  private readonly seed:number;
+  private readonly seed: number;
 
   private x: number;
   private y: number;
@@ -32,5 +32,11 @@ export class XORShift32 implements IRandomGenerator{
   getNextInt(min: number, max: number): number {
     const r = Math.abs(this.getNext());
     return min + (r % (max + 1 - min));
+  }
+}
+
+export const DefaultXORShift32GeneratorFactory: IRandomGeneratorFactory = {
+  create(): IRandomGenerator {
+    return new XORShift32();
   }
 }
