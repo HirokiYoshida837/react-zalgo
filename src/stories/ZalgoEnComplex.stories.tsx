@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import {Zalgo} from "../components/Zalgo2";
+import {Zalgo} from "../components/Zalgo";
 import {DefaultXORShift32GeneratorFactory} from "../components/logic/random/XORShift32";
 
 export default {

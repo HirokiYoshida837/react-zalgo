@@ -5,7 +5,7 @@ import {DefaultRandomGeneratorFactory} from "./random/DefaultRandomGenerator";
 /**
  * note: the return value must be greater than 0;
  */
-type GetAmountFunc = (x: number) => number;
+type GetAmountFunc = ((x: number) => number) | (() => number);
 
 export type GlitchParams = {
   readonly topGlitchAmount?: GetAmountFunc;
@@ -23,8 +23,6 @@ export const Glitch = (body: string, params?: GlitchParams) => {
   const glitched = new Array<string>();
 
   Array<string>().forEach.call(body, (item: string, i: number) => {
-    
-    // それぞれ別々でGlitchできるパターンと、全部統合するパターンで分けたほうが良さそうに見える。
 
     // bottomSide
     const btmTimes = params?.btmGlitchAmount ? params.btmGlitchAmount(i) : 0;
@@ -45,7 +43,11 @@ export const Glitch = (body: string, params?: GlitchParams) => {
       .map(x => top[x]);
 
     // join glitching text.
-    glitched.push(String.fromCodePoint(item.charCodeAt(0), ...btmNumbers, ...midNumbers, ...topNumbers))
+    glitched.push(String.fromCodePoint(item.charCodeAt(0),
+      ...btmNumbers,
+      ...midNumbers,
+      ...topNumbers
+    ))
   });
 
   return glitched.join('')
