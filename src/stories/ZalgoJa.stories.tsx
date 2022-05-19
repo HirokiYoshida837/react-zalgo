@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import {Zalgo} from "../components/Zalgo2";
+import {Zalgo} from "../components/Zalgo";
 
 export default {
   title: 'Example/Zalgo/ja',
@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof Zalgo> = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = {
-  textData: '午前3時の茨城県　注: Google ChromeではZalgoがただしく表示されない場合が多い。Firefoxなどでは見れる場合がおおい。'
+  textData: '午前3時のいばらぎけん　注: Google ChromeではZalgoがただしく表示されない場合が多い。Firefoxなどでは見れる場合がおおい。'
 };
 
 export const Secondary = Template.bind({});

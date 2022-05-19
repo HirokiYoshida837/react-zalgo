@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import {Zalgo} from "../components/Zalgo2";
+import {Zalgo} from "../components/Zalgo";
 
 export default {
   title: 'Example/Zalgo/en/simple',
@@ -53,7 +53,7 @@ export const OnlyTop = Template.bind({});
 OnlyTop.args = {
   textData: 'Only the top side of text will be glitched.',
   glitchParams: {
-    topGlitchAmount: (x) => 10,
+    topGlitchAmount: (x) => 5,
     midGlitchAmount: (x) => 0,
     btmGlitchAmount: (x) => 0,
   }
@@ -64,7 +64,7 @@ OnlyMid.args = {
   textData: 'Only the mid side of text will be glitched.',
   glitchParams: {
     topGlitchAmount: (x) => 0,
-    midGlitchAmount: (x) => 10,
+    midGlitchAmount: (x) => 5,
     btmGlitchAmount: (x) => 0,
   }
 };
@@ -75,7 +75,7 @@ OnlyBtm.args = {
   glitchParams: {
     topGlitchAmount: (x) => 0,
     midGlitchAmount: (x) => 0,
-    btmGlitchAmount: (x) => 10,
+    btmGlitchAmount: (x) => 5,
   }
 };
 
@@ -87,8 +87,8 @@ LoremIpsum.args = {
     Vel ullamcorper sea voluptua congue sea eirmod dolores eros illum dolore ea et accusam stet no accusam takimata. Sanctus facilisis eu et sit nonumy ad dolor lorem stet no nostrud et gubergren justo voluptua et. Dolore ea lorem tempor sed accusam amet. Dolor option ea dolore duo velit voluptua. Lorem nulla ipsum magna dolore tempor dolore sanctus labore ipsum dolore duo esse est nisl ipsum. Sanctus diam sadipscing et invidunt commodo nulla. Diam elitr dolores tempor et nonummy et dolor. Clita takimata lorem ut dolore lorem et adipiscing. At nonumy dolore invidunt elitr. Dolores justo nonumy sadipscing. Sanctus sea et clita. Et erat ea duo stet dolor vel et stet sadipscing duo quis aliquyam nostrud consetetur kasd. Et magna et mazim lorem blandit vero. Dolor sanctus sed duo labore lorem sed sed sea.
     `,
   glitchParams: {
-    topGlitchAmount: (x) => 0,
-    midGlitchAmount: (x) => 0,
-    btmGlitchAmount: (x) => Math.ceil(5 * Math.random()),
+    topGlitchAmount: (x) => Math.ceil(2 * Math.random()),
+    midGlitchAmount: (x) => Math.ceil(1 * Math.random()),
+    btmGlitchAmount: (x) => Math.ceil(10 * Math.random()),
   }
 };

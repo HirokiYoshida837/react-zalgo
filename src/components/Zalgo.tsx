@@ -23,9 +23,9 @@ interface ZalgoProps {
  */
 export const Zalgo: React.FC<ZalgoProps> = ({glitchParams, scale, textData}: ZalgoProps) => {
 
-  const topSide = glitchParams?.topGlitchAmount ? glitchParams?.topGlitchAmount : (x: number) => scale ?? 10;
-  const midSide = glitchParams?.midGlitchAmount ? glitchParams?.midGlitchAmount : (x: number) => scale ?? 10;
-  const btmSide = glitchParams?.btmGlitchAmount ? glitchParams?.btmGlitchAmount : (x: number) => scale ?? 10;
+  const topSide = glitchParams?.topGlitchAmount ? glitchParams?.topGlitchAmount : () => scale ?? 10;
+  const midSide = glitchParams?.midGlitchAmount ? glitchParams?.midGlitchAmount : () => scale ?? 10;
+  const btmSide = glitchParams?.btmGlitchAmount ? glitchParams?.btmGlitchAmount : () => scale ?? 10;
 
 
   // create glitched text every a LF Code.
@@ -35,8 +35,8 @@ export const Zalgo: React.FC<ZalgoProps> = ({glitchParams, scale, textData}: Zal
 
       const glitched = Glitch(item, {
         topGlitchAmount: topSide,
-        btmGlitchAmount: btmSide,
         midGlitchAmount: midSide,
+        btmGlitchAmount: btmSide,
         randomGeneratorFactory: glitchParams?.randomGeneratorFactory
       });
 
