@@ -5,7 +5,7 @@ import {DefaultRandomGeneratorFactory} from "./random/DefaultRandomGenerator";
 /**
  * note: the return value must be greater than 0;
  */
-type GetAmountFunc = ((x: number) => number) | (() => number);
+export type GetAmountFunc = ((x: number) => number) | (() => number);
 
 export type GlitchParams = {
   readonly topGlitchAmount?: GetAmountFunc;
