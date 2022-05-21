@@ -1,5 +1,5 @@
 import React from 'react';
-import {Glitch, GlitchParams} from "./logic/Logic"
+import {Glitch, GlitchParams} from "../logic/Logic"
 
 export interface ZalgoProps {
   /**
