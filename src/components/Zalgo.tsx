@@ -1,7 +1,7 @@
 import React from 'react';
 import {Glitch, GlitchParams} from "./logic/Logic"
 
-interface ZalgoProps {
+export interface ZalgoProps {
   /**
    * the text which want to glitching.
    */
