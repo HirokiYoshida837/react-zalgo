@@ -1,6 +1,6 @@
 {
-  "name": "@hyoshida/react-zalgo",
-  "version": "0.1.0",
+  "name": "@h.yoshida/react-zalgo",
+  "version": "latest",
   "private": true,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
