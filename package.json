@@ -39,5 +39,19 @@
     "build": "ts-node esbuild.ts",
     "build:types": "tsc --emitDeclarationOnly --outDir dist",
     "build:storybook": "build-storybook"
-  }
+  },
+  "description": "A react component library with Configurable 'Zalgo Text' Generator.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HirokiYoshida837/react-zalgo.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Hiroki Yoshida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HirokiYoshida837/react-zalgo/issues"
+  },
+  "homepage": "https://github.com/HirokiYoshida837/react-zalgo#readme"
 }
