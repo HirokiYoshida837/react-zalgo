@@ -19,7 +19,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    // 
+    //
     "sourceMap": true,
     "outDir": "dist",
     "declaration": true,
@@ -31,6 +31,6 @@
   ],
   "exclude": [
     "node_modules",
-    "dist",
+    "dist"
   ]
 }

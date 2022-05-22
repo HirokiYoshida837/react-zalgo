@@ -1,7 +1,6 @@
-import {IRandomGenerator, IRandomGeneratorFactory} from './IRandomGenerator';
+import { IRandomGenerator, IRandomGeneratorFactory } from './IRandomGenerator';
 
 export class XORShift32 implements IRandomGenerator {
-
   private readonly seed: number;
 
   private x: number;
@@ -10,7 +9,6 @@ export class XORShift32 implements IRandomGenerator {
   private w: number;
 
   constructor(seed = 88675123) {
-
     // random generatorインスタンス生成時に固定
     this.seed = seed;
 
@@ -25,7 +23,7 @@ export class XORShift32 implements IRandomGenerator {
     this.x = this.y;
     this.y = this.z;
     this.z = this.w;
-    return this.w = (this.w ^ (this.w >>> 19)) ^ (t ^ (t >>> 8));
+    return (this.w = this.w ^ (this.w >>> 19) ^ (t ^ (t >>> 8)));
   }
 
   // mod で切ってるので偏りがあるかも。
@@ -39,4 +37,4 @@ export const DefaultXORShift32GeneratorFactory: IRandomGeneratorFactory = {
   create(): IRandomGenerator {
     return new XORShift32();
   }
-}
+};

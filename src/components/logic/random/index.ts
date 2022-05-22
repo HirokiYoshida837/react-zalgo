@@ -1,3 +1,3 @@
-export * from './DefaultRandomGenerator'
-export * from './IRandomGenerator'
-export * from './XORShift32'
+export * from './DefaultRandomGenerator';
+export * from './IRandomGenerator';
+export * from './XORShift32';
