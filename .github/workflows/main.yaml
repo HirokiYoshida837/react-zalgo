@@ -46,6 +46,17 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      - name: run esbuild
+        run: npm run build
+        
+      - name: run esbuild
+        run: npm run build:types
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          name: packages_${{github.sha}}
+          path: ./dist
 
   build-storybook:
     needs: [lint]
