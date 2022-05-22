@@ -1,10 +1,10 @@
 # react-zalgo
 
-react component like a zalgo.
+<a href="https://hirokiyoshida837.github.io/react-zalgo/" target="_blank">
+  <img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">
+</a>
 
+---
 
+A react component library with Configurable 'Zalgo Text' Generator.
 
-https://www.hacketts.dev/blog/how-to-create-a-react-component-library
-
-https://kwst.site/201907293042/
-https://zenn.dev/rabbit/articles/ef84ae02a987b2
