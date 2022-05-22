@@ -2,17 +2,19 @@
 
 <p align="center">
   <a href="https://github.com/HirokiYoshida837/react-zalgo">
-      <img width="200%" src="https://raw.githubusercontent.com/HirokiYoshida837/react-zalgo/main/resources/zalgo.svg" alt="react-zalgo" />
+      <img width="100%" src="https://raw.githubusercontent.com/HirokiYoshida837/react-zalgo/main/resources/zalgo.svg" alt="react-zalgo" />
   </a>
 </p>
 
+<p align="center">
 
+  [![License](https://img.shields.io/apm/l/atomic-design-ui.svg?style=flat)](https://github.com/HirokiYoshida837/react-zalgo/blob/main/LICENSE)
+  [![CI/CD Status](https://github.com/HirokiYoshida837/react-zalgo/actions/workflows/main.yaml/badge.svg)](https://github.com/HirokiYoshida837/react-zalgo/actions/workflows/main.yaml)
+  [![StoryBook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://hirokiyoshida837.github.io/react-zalgo/)
+  [![npm version](https://img.shields.io/npm/v/@h.yoshida/react-zalgo.svg?style=flat-round)](https://www.npmjs.com/package/@h.yoshida/react-zalgo)
 
+</p>
 
-[![License](https://img.shields.io/apm/l/atomic-design-ui.svg?style=flat)](https://github.com/HirokiYoshida837/react-zalgo/blob/main/LICENSE)
-[![CI/CD Status](https://github.com/HirokiYoshida837/react-zalgo/actions/workflows/main.yaml/badge.svg)](https://github.com/HirokiYoshida837/react-zalgo/actions/workflows/main.yaml)
-[![StoryBook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://hirokiyoshida837.github.io/react-zalgo/)
-[![npm version](https://img.shields.io/npm/v/@h.yoshida/react-zalgo.svg?style=flat-round)](https://www.npmjs.com/package/@h.yoshida/react-zalgo)
 ---
 
 A react component library with Configurable 'Zalgo Text' Generator.
