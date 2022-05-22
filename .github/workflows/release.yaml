@@ -1,5 +1,8 @@
 name: Tagged Release
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
