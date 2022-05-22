@@ -1,5 +1,5 @@
 {
-  "name": "react-zalgo",
+  "name": "@hyoshida/react-zalgo",
   "version": "0.1.0",
   "private": true,
   "main": "dist/cjs/index.js",
