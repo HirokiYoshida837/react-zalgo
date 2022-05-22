@@ -1,36 +1,17 @@
-name: CI/CD
+name: Publish
 
 permissions:
   contents: write
 
 on:
-  push:
-    branches: [main]
-    paths-ignore: ["**/README.md"]
+  release:
+    types: [created]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 15.x
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
-
   build-packages:
     needs: [lint]
     runs-on: ubuntu-20.04
@@ -46,13 +27,13 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        
+
       - name: run esbuild
         run: npm run build
-        
+
       - name: run build:types
         run: npm run build:types
-        
+
       - uses: actions/upload-artifact@v3
         with:
           name: packages_${{github.sha}}
@@ -70,6 +51,8 @@ jobs:
         with:
           node-version: 15.x
           cache: "npm"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@hyoshida"
 
       - uses: actions/download-artifact@v3
         id: download
@@ -83,9 +66,8 @@ jobs:
       - name: "dry-run"
         run: npm publish --dry-run --verbose
 
-
-  build-storybook:
-    needs: [lint]
+  deploy-package:
+    needs: [deploy-package-dryrun]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
@@ -96,38 +78,18 @@ jobs:
         with:
           node-version: 15.x
           cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build-Storybook
-        run: npm run build:storybook
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: storybook-static_${{github.sha}}
-          path: ./storybook-static
-
-  deploy-storybook:
-    needs: [build-storybook]
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+          registry-url: "https://registry.npmjs.org"
 
       - uses: actions/download-artifact@v3
         id: download
         with:
-          name: storybook-static_${{github.sha}}
-          path: ./storybook-static
+          name: packages_${{github.sha}}
+          path: ./dist
 
       - name: "Echo download path"
         run: echo ${{steps.download.outputs.download-path}}
 
-      - name: Deploy storybooks
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+      - name: "publish"
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
