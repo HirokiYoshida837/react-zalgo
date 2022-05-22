@@ -1,5 +1,8 @@
 name: Tagged Release
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
@@ -15,3 +18,5 @@ jobs:
         with:
           repo_token: "${{ github.token }}"
           prerelease: false
+          automatic_release_tag: "latest"
+          
