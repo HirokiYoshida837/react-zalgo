@@ -6,21 +6,21 @@
 [![npm version](https://img.shields.io/npm/v/@h.yoshida/react-zalgo.svg?style=flat-round)](https://www.npmjs.com/package/@h.yoshida/react-zalgo)
 ---
 
-A react component library with Configurable 'Zalgo Text' Generator.
+A react component library with Configurable 'Zalgo Text' Generator ,
 
 ## Getting Started
 
-Work in progress...
+作成中
 
 ## Documentation
 
-You can try to use Sample from [Storybook](https://hirokiyoshida837.github.io/react-zalgo/?path=/story/example-zalgo-en-complex--glitch-amount-controll)
+[Storybook](https://hirokiyoshida837.github.io/react-zalgo/?path=/story/example-zalgo-en-complex--glitch-amount-controll) から、動作サンプルを見ることができます。
 
-more information will come soon...
+その他の情報は作成中...
 
 ## Quick Start
 
-### 1. Installation
+### 1. インストール
 
 ```shell
 $ npm i @h.yoshida/react-zalgo
@@ -28,7 +28,7 @@ $ npm i @h.yoshida/react-zalgo
 $ yarn add @h.yoshida/react-zalgo
 ```
 
-### 2. Using in React.
+### 2. Reactで使用する
 
 ```typescript jsx
 import {GlitchParams, Zalgo} from '@h.yoshida/react-zalgo';
@@ -51,7 +51,7 @@ return (
 )
 ```
 
-If you want to get reproducible glitch results, use `XORShift32` to GlitchAmount.
+`XORShift32` などを使用してGlitch量を調整することで、画面をリロードしても、再度同じZalgoテキストを得ることができます。
 
 ```typescript jsx
 
@@ -78,14 +78,23 @@ return (
 
 ```
 
-and more sample will be found in [Storybook](https://hirokiyoshida837.github.io/react-zalgo/?path=/story/example-zalgo-en-complex--glitch-amount-controll)
+その他のサンプルはこちらの [Storybook](https://hirokiyoshida837.github.io/react-zalgo/?path=/story/example-zalgo-en-complex--glitch-amount-controll) を参照。
 
+※日本語に対して使用する場合、ブラウザ種別などによって意図しない表示内容になる場合があります。 参考 : [「午前3時の茨城県」の使用文字を徹底解明！ - Qiita](https://qiita.com/YSRKEN/items/fc4174f665339727184e)
+
+
+```
+変換前 : 午前3時のいばらぎけん
+
+
+変換後 : 午̧̠̤̟̤̰̭̮̥͔̀̀́́͘͝ͅ҉̵̆͒̈̒̿̈́ͭ̓͑̚͞前̸̷̶̨̗̪͇̦̻̬͈̞͎͓͘͟͟͡͏̵̌ͥ̓̿̈̊ͣ͂̆͊3̶̴̛̱̝̜̪̞̳̭̫̭̫͠͞͡҉̡̨̀́ͯ̐ͦ̾̿͂̂̈́̌時̷͈̮͎͎̟̪͉͉̼̜͏̵̵̷̡̢̛́́̂ͭ̎̊̈́̏͛̾͝の̷̛͇͕̼̣͖͙̹͚̙̬́ͯ͌͊̽̒́ͣ̊͛̐͘͘͜͜͡͞͡い̶͈̪͍̰͖̭͔̣͍͘͝͡ͅ͏́͘͟͠҉ͬ̈́ͨͪ̈̈́ͣ̐͑͂ば̸̸̴̶̛̼̮̫̤̜̹̮̪̲̗̀͘͘͏̷̐ͫͤͯ̋̾̈̔̈́ͤら̸̴̢̛̭̬̙̞̞̜̜͔̪͎͢͡͏̀̀̾̈́͛ͧͨͩ́ͭͣ̚͝ぎ̶̨̨̛̭̙̗̝͍̫̲̟͓͈̈́̾̀͒ͦͯ͂̐̌͘̚͜͞͞͝͞け̧͔̬͎̮̭̲̩̻̣͙҉̛͠҉́̏̇ͩ̂ͨ̐̅̾͋̈́͟͡͠͠ん̸̸̸̷̝̲̝̤͓̺͔͚̼͠ͅ҉̵̧̀ͪ̃̽ͨ͌̑̅̉́̚͡　̞̻̼̳̻̰̻̘͔͈͏͢҉̷̵̵́̾̈ͭ̎̾́ͭ̇́͗͢͢͢
+```
 
 ## About Zalgo
 
 - reference
-  - [Diacritic - Wikipedia](https://en.wikipedia.org/wiki/Diacritic)
-  - [Combining character - Wikipedia](https://en.wikipedia.org/wiki/Combining_character)
+  - [ダイアクリティカルマーク - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%AF)
+  - [合成可能なダイアクリティカルマーク - Wikipedia](https://ja.wikipedia.org/wiki/%E5%90%88%E6%88%90%E5%8F%AF%E8%83%BD%E3%81%AA%E3%83%80%E3%82%A4%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%AF)
   - [Zalgo Text Generator by Tchouky - To invoke the hive-mind representing chaos. Invoking the feeling of chaos. With out order. The Nezperdian hive-mind of chaos. Zalgo. He who Waits Behind The Wall. ZALGO!](http://www.eeemo.net/)
 
 
