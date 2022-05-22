@@ -13,7 +13,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 15.x
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
   build-packages:
+    needs: [lint]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
@@ -29,6 +48,7 @@ jobs:
         run: npm ci
 
   build-storybook:
+    needs: [lint]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3

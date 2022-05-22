@@ -1,5 +1,4 @@
 export interface IRandomGenerator {
-
   /**
    * getNextRandomValue(between 0 and 1)
    */
@@ -14,5 +13,5 @@ export interface IRandomGenerator {
 }
 
 export interface IRandomGeneratorFactory {
-  create(): IRandomGenerator
+  create(): IRandomGenerator;
 }
