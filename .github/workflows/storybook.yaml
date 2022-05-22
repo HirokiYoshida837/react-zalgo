@@ -1,5 +1,8 @@
 name: "Storybook Deployment"
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
