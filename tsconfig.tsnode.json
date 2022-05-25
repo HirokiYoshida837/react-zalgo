@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src",
+    "esbuild.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/stories/*"
+  ]
+}
