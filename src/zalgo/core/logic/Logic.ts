@@ -1,9 +1,9 @@
-import CombiningCharacter from './constants/combining-character';
+import CombiningCharacter from '../constants/combining-character';
 import {
   IRandomGenerator,
   IRandomGeneratorFactory
-} from './random/IRandomGenerator';
-import { DefaultRandomGeneratorFactory } from './random/DefaultRandomGenerator';
+} from '../random/IRandomGenerator';
+import { DefaultRandomGeneratorFactory } from '../random/DefaultRandomGenerator';
 
 /**
  * note: the return value must be greater than 0;
