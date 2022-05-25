@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Zalgo } from '../components/zalgo/Zalgo';
-import { DefaultXORShift32GeneratorFactory } from '../components/logic/random/XORShift32';
+import { Zalgo } from '../../zalgo/react/Zalgo';
+import { DefaultXORShift32GeneratorFactory } from '../../zalgo/core/random/XORShift32';
 
 export default {
   title: 'Example/Zalgo/en/complex',
